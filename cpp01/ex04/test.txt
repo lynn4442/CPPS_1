@@ -1,0 +1,13 @@
+This is a test file for the replace program.
+It replaces occurrences of a string with another string.
+For example, replace "string" with "word" to get:
+This is a test file for the replace program.
+It replaces occurrences of a word with another word.
+
+Let's test some edge cases:
+- Empty lines:
+
+- Consecutive occurrences: stringstring should become wordword
+- Line ending with the search string: string
+- Multiple occurrences in one line: string string string
+- Partial matches: substring should remain as substring 
