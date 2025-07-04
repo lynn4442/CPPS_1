@@ -9,17 +9,16 @@ private:
     Fixed const _y;
 
 public:
-    Point();                           // Default constructor
-    Point(const float x, const float y); // Float constructor
-    Point(const Point& src);           // Copy constructor
-    Point& operator=(const Point& rhs); // Copy assignment operator
-    ~Point();                          // Destructor
+    Point();                           
+    Point(const float x, const float y); 
+    Point(const Point& src);          
+    Point& operator=(const Point& rhs);
+    ~Point();                        
 
     Fixed getX() const;
     Fixed getY() const;
 };
 
-// BSP function declaration
 bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif 

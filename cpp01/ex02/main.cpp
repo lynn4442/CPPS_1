@@ -7,15 +7,13 @@ int main()
     std::string* stringPTR = &str;
     std::string& stringREF = str;
     
-    // Print memory addresses
-    std::cout << "Memory address of the string variable: " << &str << std::endl;
-    std::cout << "Memory address held by stringPTR: " << stringPTR << std::endl;
-    std::cout << "Memory address held by stringREF: " << &stringREF << std::endl;
-    
-    // Print values
-    std::cout << "Value of the string variable: " << str << std::endl;
-    std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
-    std::cout << "Value pointed to by stringREF: " << stringREF << std::endl;
-    
+    //memory address here
+    std::cout << "The memory address of the string variable: " << &str << std::endl;
+    std::cout << "The memory address held by stringPTR: " << stringPTR << std::endl;
+    std::cout << "The memory address held by stringREF: " << &stringREF << std::endl;
+    //value here
+    std::cout << "The value of the string variable: " << str << std::endl;
+    std::cout << "The value pointed to by stringPTR: " << *stringPTR << std::endl;
+    std::cout << "The value pointed to by stringREF: " << stringREF << std::endl;
     return 0;
 } 

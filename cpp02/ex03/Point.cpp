@@ -10,8 +10,6 @@ Point::Point(const Point& src) : _x(src._x), _y(src._y) {
 }
 
 Point& Point::operator=(const Point& rhs) {
-    // We can't modify const attributes, so we do nothing
-    // But we must return *this
     (void)rhs;
     return *this;
 }

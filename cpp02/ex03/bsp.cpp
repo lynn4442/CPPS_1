@@ -35,7 +35,5 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
     // If any of the areas is zero, the point lies on an edge or is a vertex
     if (areaPAB == Fixed(0) || areaPBC == Fixed(0) || areaPCA == Fixed(0))
         return false;
-    
-    // Check if the sum of areas of triangles equals the area of the original triangle
     return (areaPAB + areaPBC + areaPCA == areaABC);
 } 

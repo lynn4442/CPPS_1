@@ -44,7 +44,6 @@ int Fixed::toInt(void) const {
     return this->_value >> this->_fractionalBits;
 }
 
-// Comparison operators
 bool Fixed::operator>(const Fixed& rhs) const {
     return this->_value > rhs.getRawBits();
 }
@@ -69,7 +68,6 @@ bool Fixed::operator!=(const Fixed& rhs) const {
     return this->_value != rhs.getRawBits();
 }
 
-// Arithmetic operators
 Fixed Fixed::operator+(const Fixed& rhs) const {
     Fixed result;
     result.setRawBits(this->_value + rhs.getRawBits());
@@ -98,7 +96,6 @@ Fixed Fixed::operator/(const Fixed& rhs) const {
     return result;
 }
 
-// Increment/decrement operators
 Fixed& Fixed::operator++() {
     this->_value++;
     return *this;

@@ -1,6 +1,4 @@
 #include "Zombie.hpp"
-#include "newZombie.hpp"
-#include "randomChump.hpp"
 
 int main(void) 
 {
@@ -8,6 +6,5 @@ int main(void)
     heapZombie->announce();
     delete heapZombie;
     randomChump("StackZombie");
-
     return 0;
 } 

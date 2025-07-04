@@ -4,20 +4,17 @@
 int main()
 {
     int N = 5;
+	int i = 0;
     std::string zombieName = "Horde Zombie";
-    
-    // Create a horde of zombies
+    //horde of zombies
     Zombie* horde = zombieHorde(N, zombieName);
-    
-    // Make each zombie announce itself
-    for (int i = 0; i < N; i++)
+	//we are using the horde pointer to access the zombies and announce them
+    while (i < N)
     {
         std::cout << "Zombie " << i + 1 << ": ";
         horde[i].announce();
+		i++;
     }
-    
-    // Delete the horde to free memory
     delete[] horde;
-    
     return 0;
 } 
