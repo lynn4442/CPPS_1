@@ -4,18 +4,19 @@
 #include <iostream>
 #include <string>
 
-class Animal {
-protected:
-    std::string type;
+class Animal
+{
+	protected:
+		std::string type;
 
-public:
-    Animal();
-    Animal(const Animal& other);
-    Animal& operator=(const Animal& other);
-    virtual ~Animal();
+	public:
+		Animal();
+		Animal(const Animal& other);
+		Animal& operator=(const Animal& other);
+		virtual ~Animal();
 
-    std::string getType() const;
-    virtual void makeSound() const;
+		std::string getType() const;
+		virtual void makeSound() const;
 };
 
-#endif // ANIMAL_HPP 
+#endif

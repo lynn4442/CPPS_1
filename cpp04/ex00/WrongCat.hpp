@@ -3,14 +3,15 @@
 
 #include "WrongAnimal.hpp"
 
-class WrongCat : public WrongAnimal {
-public:
-    WrongCat();
-    WrongCat(const WrongCat& other);
-    WrongCat& operator=(const WrongCat& other);
-    ~WrongCat();
+class WrongCat : public WrongAnimal
+{
+	public:
+		WrongCat();
+		WrongCat(const WrongCat& other);
+		WrongCat& operator=(const WrongCat& other);
+		~WrongCat();
 
-    void makeSound() const;  // Will not be called polymorphically
+		void makeSound() const;
 };
 
-#endif // WRONGCAT_HPP 
+#endif

@@ -4,18 +4,19 @@
 #include <iostream>
 #include <string>
 
-class WrongAnimal {
-protected:
-    std::string type;
+class WrongAnimal
+{
+	protected:
+		std::string type;
 
-public:
-    WrongAnimal();
-    WrongAnimal(const WrongAnimal& other);
-    WrongAnimal& operator=(const WrongAnimal& other);
-    ~WrongAnimal();
+	public:
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal& operator=(const WrongAnimal& other);
+		~WrongAnimal();
 
-    std::string getType() const;
-    void makeSound() const;  // Note: Not virtual
+		std::string getType() const;
+		void makeSound() const;
 };
 
-#endif // WRONGANIMAL_HPP 
+#endif
