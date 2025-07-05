@@ -3,22 +3,19 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
-public:
-    // Constructors and destructor
-    ScavTrap();
-    ScavTrap(const std::string& name);
-    ScavTrap(const ScavTrap& other);
-    ~ScavTrap();
-    
-    // Assignment operator
-    ScavTrap& operator=(const ScavTrap& other);
-    
-    // Override attack function
-    void attack(const std::string& target);
-    
-    // Special ScavTrap function
-    void guardGate();
+class ScavTrap : public ClapTrap
+{
+	public:
+		ScavTrap();
+		ScavTrap(const std::string& name);
+		ScavTrap(const ScavTrap& other);
+		~ScavTrap();
+	
+		ScavTrap& operator=(const ScavTrap& other);
+	
+		void attack(const std::string& target);
+	
+		void guardGate();
 };
 
-#endif // SCAVTRAP_HPP 
+#endif

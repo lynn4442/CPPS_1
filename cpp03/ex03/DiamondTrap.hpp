@@ -4,25 +4,23 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap {
-private:
-    std::string _name; // Same variable name as in ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
+{
+	private:
+		std::string _name;
 
-public:
-    // Constructors and destructor
-    DiamondTrap();
-    DiamondTrap(const std::string& name);
-    DiamondTrap(const DiamondTrap& other);
-    ~DiamondTrap();
-    
-    // Assignment operator
-    DiamondTrap& operator=(const DiamondTrap& other);
-    
-    // Override attack to use ScavTrap's version
-    void attack(const std::string& target);
-    
-    // Special DiamondTrap function
-    void whoAmI();
+	public:
+		DiamondTrap();
+		DiamondTrap(const std::string& name);
+		DiamondTrap(const DiamondTrap& other);
+		~DiamondTrap();
+	
+		DiamondTrap& operator=(const DiamondTrap& other);
+	
+		// override attack function from ScavTrap
+		void attack(const std::string& target);
+	
+		void whoAmI();
 };
 
-#endif // DIAMONDTRAP_HPP 
+#endif
