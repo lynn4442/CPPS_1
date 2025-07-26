@@ -9,13 +9,17 @@ int main(int argc, char **argv)
         return (0);
     }
 
-    for (int i = 1; i < argc; i++)
+    int i = 1;
+    while (i < argc)
     {
         std::string str = argv[i];
-        for (size_t j = 0; j < str.length(); j++)
+        size_t j = 0;
+        while (j < str.length())
         {
             std::cout << (char)std::toupper(str[j]);
+            j++;
         }
+        i++;
     }
     std::cout << std::endl;
     return (0);

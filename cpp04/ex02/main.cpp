@@ -57,7 +57,7 @@ int main()
 			animals[k] = new Dog();
 		else
 			animals[k] = new Cat();
-		i++;
+		k++;
 	}
 
 	std::cout << "\n----- ANIMAL SOUNDS -----\n" << std::endl;

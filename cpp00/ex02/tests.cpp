@@ -40,21 +40,23 @@ int		main( void ) {
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
-	for ( acc_int_t it( acc_begin, dep_begin );
-		  it.first != acc_end && it.second != dep_end;
-		  ++(it.first), ++(it.second) ) {
+	acc_int_t it( acc_begin, dep_begin );
+	while ( it.first != acc_end && it.second != dep_end ) {
 
 		(*(it.first)).makeDeposit( *(it.second) );
+		++(it.first);
+		++(it.second);
 	}
 
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
-	for ( acc_int_t it( acc_begin, wit_begin );
-		  it.first != acc_end && it.second != wit_end;
-		  ++(it.first), ++(it.second) ) {
+	it = acc_int_t( acc_begin, wit_begin );
+	while ( it.first != acc_end && it.second != wit_end ) {
 
 		(*(it.first)).makeWithdrawal( *(it.second) );
+		++(it.first);
+		++(it.second);
 	}
 
 	Account::displayAccountsInfos();

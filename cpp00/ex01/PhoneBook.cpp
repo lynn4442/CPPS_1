@@ -37,13 +37,15 @@ void PhoneBook::searchContact() const
               << std::setw(10) << "First Name" << "|"
               << std::setw(10) << "Last Name" << "|"
               << std::setw(10) << "Nickname" << "|" << std::endl;
-    for (int i = 0; i < totalContacts; i++) 
+    int i = 0;
+    while (i < totalContacts) 
 	{
         std::cout << std::setw(10) << i << "|";
         displayField(contacts[i].getFirstName());
         displayField(contacts[i].getLastName());
         displayField(contacts[i].getNickname());
         std::cout << std::endl;
+        i++;
     }
     std::cout << "Enter index to display: ";
     int index;

@@ -30,10 +30,10 @@ void testDeepCopy()
 int main()
 {
 	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const Animal* dog_ptr = new Cat();
 
 	delete j;
-	delete i;
+	delete dog_ptr;
 
 	const int animalCount = 10;
 	Animal* animals[animalCount];
@@ -46,7 +46,7 @@ int main()
 			animals[k] = new Dog();
 		else
 			animals[k] = new Cat();
-		i++;
+		k++;
 	}
 
 	std::cout << "\n----- ANIMAL SOUNDS -----\n" << std::endl;
